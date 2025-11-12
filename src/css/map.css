@@ -9,7 +9,8 @@
 }
 .squirrel-icon {
     display: inline-block;
-    transform: translateX(150px) rotate(30deg);
+    transform: translateX(20vw) rotate(30deg);
+        /* замість 150px */
     /* зміщення вправо і нахил */
     opacity: 0;
     transition: transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 1s ease;

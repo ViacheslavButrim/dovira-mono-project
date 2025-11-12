@@ -8,7 +8,6 @@
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
-@import url('./animations.css');
 @import url('./mobile-menu.css');
 
 /* Sections style */
@@ -18,6 +17,4 @@
 @import url('./inform.css');
 @import url('./map.css');
 @import url('./brands.css');
-@import url('./badges.css');
-@import url('./back-link.css');
 @import url('./footer.css');

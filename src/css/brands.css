@@ -1,0 +1,58 @@
+.brands {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 12px 0;
+      gap: 36px;
+  }
+
+ .brands-container {
+     max-width: 1920px;
+    background: linear-gradient(180deg,
+                rgb(134, 169, 200) 0%,
+                /* верхній колір */
+                #8BADA3 100%
+                /* нижній колір */
+            );
+     overflow: hidden;
+     position: relative;
+ }
+
+ .h-brands {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     color: beige;
+     font-size: 10px;
+     font-weight: 600;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     opacity: 0;
+     transform: translateY(20px);
+     transition: all 0.6s ease-out;
+ }
+
+ .hands-icon {
+     opacity: 0;
+     transform: scale(0.6) rotate(-15deg);
+     transform-origin: center;
+     transition: all 0.6s ease-out 0.3s;
+ }
+
+ /*  Активна анімація при скролі */
+ .h-brands.animate {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .h-brands.animate .hands-icon {
+     opacity: 1;
+     transform: scale(1) rotate(0);
+ }
+
+ /* Ховер для живості */
+ .h-brands:hover .hands-icon {
+     transform: scale(1.15) rotate(5deg);
+     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+ }

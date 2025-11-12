@@ -1,0 +1,77 @@
+.container-inform {
+    background-color: rgb(134, 169, 200);
+    color: beige;
+    text-align: center;
+    padding: 36px 16px;
+}
+
+.h-inform {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(270deg,
+            #ffe17d,
+            #ffd27f,
+            #ffc3a0,
+            #ffb5c2,
+            #d4bfff,
+            #a8e6ff);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 6s ease infinite;
+    text-shadow: 0 0 24px rgba(255, 255, 255, 0.4);
+}
+
+/* сучасна плавна анімація */
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.p-inform {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    max-width: 800px;
+    margin: 12px auto;
+    line-height: 1.6;
+}
+/* ❤️💙 Сяйво сердець */
+.heart {
+    display: inline-block;
+    animation: glow 1.8s ease-in-out infinite alternate;
+    font-size: 16px;
+}
+
+.heart-yellow {
+    filter: drop-shadow(0 0 6px rgba(255, 230, 120, 0.8));
+}
+
+.heart-blue {
+    filter: drop-shadow(0 0 6px rgba(100, 200, 255, 0.8));
+    animation-delay: 0.9s;
+    /* щоб сяяли поперемінно */
+}
+
+@keyframes glow {
+    from {
+        transform: scale(1);
+        filter: brightness(1) drop-shadow(0 0 3px rgba(255, 255, 255, 0.3));
+    }
+
+    to {
+        transform: scale(1.2);
+        filter: brightness(1.5) drop-shadow(0 0 10px rgba(255, 255, 255, 0.9));
+    }
+}

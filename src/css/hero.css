@@ -1,0 +1,241 @@
+.section-hero {
+    position: relative;
+    height: 100vh;
+    color: #d3f6f7;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    overflow: hidden;
+    padding-top: 72px;
+}
+.section-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.3) 0%,
+            rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+}
+
+/* Навігаційні стрілки */
+.hero-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(6px);
+    border: none;
+    font-size: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.hero-arrow:hover {
+    background: rgba(255, 255, 255, 0.038);
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.hero-arrow:active {
+    transform: translateY(-50%) scale(0.95);
+    background: rgba(255, 255, 255, 0.45);
+}
+
+.hero-arrow.left {
+    left: 24px;
+}
+
+.hero-arrow.right {
+    right: 24px;
+}
+
+/* Внутрішній контейнер */
+.container-hero {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+
+
+.btn-hero {
+    background: #8BADA3;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.btn-hero:hover {
+    background: #005fcc;
+}
+.hero-h {
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    padding: 24px 0;
+}
+.hero-p {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    padding: 24px 0;
+} 
+
+.btn-hero-container {
+   display: inline-flex;
+   flex-direction: column;
+   gap: 8px;
+   padding: 24px 0;
+}
+.btn-hero:hover, .btn-hero:focus {
+    background-color: #00cccc;
+}
+.brands {
+display: inline-block;
+}
+.brands-icon {
+width: 250px;
+height: 40px;
+}
+@media screen and (min-width: 768px) {
+    .btn-hero-container {
+        justify-content: center;
+        flex-direction: row;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+} 
+@media screen and (min-width: 1158px) {
+
+    .btn-hero-container {
+        justify-content: center;
+        padding-top: 80px;
+    }
+    .btn-hero {
+      margin: 0;
+    }
+    .hero-h {
+        padding-top: 80px;
+    }
+}
+/*анімація кнопок*/
+.smile-icon {
+    transition: transform 0.4s ease, filter 0.4s ease;
+    will-change: transform;
+}
+
+/* 📞 Телефон — дзвонить */
+.icon-phone {
+    animation: phoneRing 2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes phoneRing {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: rotate(-15deg);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: rotate(15deg);
+    }
+}
+
+/* 💬 Callback — легке мерехтіння/світіння */
+.icon-callback {
+    animation: callbackPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes callbackPulse {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+        transform: scale(1);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.8));
+        transform: scale(1.15);
+    }
+}
+
+/* 😄 Смайлик — сміється */
+.icon-happy {
+    animation: smileLaugh 3s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes smileLaugh {
+
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+
+    25% {
+        transform: rotate(10deg) scale(1.05);
+    }
+
+    50% {
+        transform: rotate(-10deg) scale(1.05);
+    }
+
+    75% {
+        transform: rotate(8deg) scale(1.03);
+    }
+}
+
+/* 💰 Валюта — блиск монети */
+.icon-currency {
+    animation: coinShine 4s ease-in-out infinite;
+}
+
+@keyframes coinShine {
+
+    0%,
+    100% {
+        filter: brightness(1);
+        transform: scale(1);
+    }
+
+    50% {
+        filter: brightness(1.8) drop-shadow(0 0 10px gold);
+        transform: scale(1.2) rotate(5deg);
+    }
+}
+
+/* 🔥 Ефект при наведенні на кнопку */
+.btn-hero:hover .smile-icon {
+    transform: scale(1.25);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}

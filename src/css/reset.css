@@ -1,7 +1,6 @@
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
-  -webkit-overflow-scrolling: touch;
 }
 
 h1,

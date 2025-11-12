@@ -18,12 +18,3 @@
 @import url('./map.css');
 @import url('./brands.css');
 @import url('./footer.css');
-* {
-  outline: 1px solid red;
-  /* обведе всі елементи */
-}
-body {
-  outline: 2px solid green;
-  overflow-x: hidden;
-  /* вимкне горизонтальне скролювання */
-}

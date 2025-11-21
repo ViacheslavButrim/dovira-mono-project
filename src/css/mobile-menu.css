@@ -52,12 +52,7 @@
      letter-spacing: 0.02em;
      color: #434455;
  }
-
- .nav-studio,
- .contact-nbr {
-     color: #404bbf;
- }
-
+ 
  .contact-item-menu {
      display: flex;
      flex-direction: column;

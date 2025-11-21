@@ -24,7 +24,7 @@
      align-items: center;
      gap: 8px;
      color: beige;
-     font-size: 10px;
+     font-size: 14px;
      font-weight: 600;
      letter-spacing: 1px;
      text-transform: uppercase;
@@ -55,4 +55,15 @@
  .h-brands:hover .hands-icon {
      transform: scale(1.15) rotate(5deg);
      filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
+ }
+ .brands a {
+     display: inline-block;
+     transition: transform 0.3s ease, filter 0.3s ease;
+ }
+
+ .brands a:hover {
+     transform: scale(1.15);
+     /* збільшуємо на 15% */
+     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+     /* додаємо легку тінь для об’єму */
  }

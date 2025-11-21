@@ -1,4 +1,5 @@
 .footer {
+  display: flex;
   background-color: #8BADA3;
   color: #fff;
   text-align: center;

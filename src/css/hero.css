@@ -1,33 +1,44 @@
 .section-hero {
     position: relative;
-    height: 100dvh;
-    color: #d3f6f7;
+    width: 100%;
+    height: 100vh;
+    /* на весь екран */
+    overflow: hidden;
     display: flex;
     align-items: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-image 1s ease-in-out;
-    overflow: hidden;
-    padding-top: env(safe-area-inset-top, 72px);
 }
-.section-hero::after {
-    content: "";
+
+.hero-video {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg,
-            rgba(0, 0, 0, 0.3) 0%,
-            rgba(0, 0, 0, 0.7) 100%);
-    z-index: 1;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    /* щоб красиво заповнювало */
 }
 
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    /* затемнення */
+    z-index: -1;
+}
 
-
-/* Внутрішній контейнер */
 .container-hero {
-    text-align: center;
-    z-index: 2;
     position: relative;
+    z-index: 2;
+    /* контент поверх відео */
+    text-align: center;
+    color: #fff;
 }
 
 
@@ -54,12 +65,14 @@
     text-align: center;
     font-family:'Courier New', Courier, monospace;
     padding: 24px 0;
+    color:#037777;
 }
 .hero-p {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     text-align: center;
     padding: 24px 0;
+    color: #037777;
 } 
 
 .btn-hero-container {

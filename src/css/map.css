@@ -7,20 +7,6 @@
     gap: 32px;
      background-color:rgb(134, 169, 200);
 }
-.squirrel-icon {
-    display: inline-block;
-    transform: translateX(20vw) rotate(30deg);
-        /* замість 150px */
-    /* зміщення вправо і нахил */
-    opacity: 0;
-    transition: transform 1.2s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 1s ease;
-}
-
-.squirrel-icon.animate-in {
-    transform: translateX(0) rotate(0deg);
-    opacity: 1;
-}
-
 .location-under-text {
     font-weight: 600;
     margin-bottom: 16px;
@@ -145,32 +131,6 @@
     animation: bikeIdle 1s ease-in-out infinite;
 }
 
-/* додатковий ефект при hover: велосипед прискорюється */
-.location-map-link:hover .location-map-link-icon {
-    animation: bikeMove 2s infinite linear;
-}
-
-@keyframes bikeMove {
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(32px);
-    }
-
-    50% {
-        transform: translateX(56px);
-    }
-
-    75% {
-        transform: translateX(32px) ;
-    }
-
-    100% {
-        transform: translateX(0) ;
-    }
-}
 .title-h2 {
     display: flex;
     gap: 8px;

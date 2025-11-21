@@ -1,7 +1,5 @@
 html {
   scrollbar-width: thin;
-    /* Firefox + Chrome */
-    scrollbar-color: #328db7 #111;
   scroll-behavior: smooth;
   box-sizing: border-box;
 }

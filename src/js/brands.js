@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-const target = document.querySelector(".h-brands");
+  if (!window.location.pathname.endsWith("/") && !window.location.pathname.endsWith("index.html")) return;
+
+  const target = document.querySelector(".h-brands");
+  if (!target) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -8,9 +11,7 @@ const target = document.querySelector(".h-brands");
         observer.unobserve(entry.target); 
       }
     });
-  }, {
-    threshold: 0.4 
-  });
+  }, { threshold: 0.4 });
 
   observer.observe(target);
 });

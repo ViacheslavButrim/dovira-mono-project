@@ -157,6 +157,9 @@
         flex-direction: row;
         gap: 24px;
     }
+    .map-container{
+        padding: 24px 24px;
+    }
 
     .location-information-div,
     .location-map-div {

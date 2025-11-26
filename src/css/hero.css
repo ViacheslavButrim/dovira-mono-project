@@ -87,6 +87,7 @@ display: inline-block;
 width: 250px;
 height: 40px;
 }
+
 @media screen and (min-width: 768px) {
     .btn-hero-container {
         justify-content: center;

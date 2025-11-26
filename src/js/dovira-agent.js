@@ -1,5 +1,5 @@
 // -------------------------------
-// ЛОКАЛЬНИЙ FAQ БЕЗКОШТОВНО
+// ЛОКАЛЬНИЙ FAQ 
 // -------------------------------
 const LOCAL_FAQ = [
   // =============================================
@@ -369,7 +369,7 @@ LOCAL_FAQ.forEach(item => {
   const entry = document.createElement("div");
   entry.style.border = "1px solid #ccc";
   entry.style.borderRadius = "8px";
-  entry.style.marginBottom = "10px";
+  entry.style.marginBottom = "12px";
   entry.style.padding = "10px";
   entry.style.cursor = "pointer";
   entry.style.transition = "all 0.2s";
@@ -384,9 +384,9 @@ LOCAL_FAQ.forEach(item => {
   // Контент (short + medium + detailed)
   const content = document.createElement("div");
   content.innerHTML = `
-    <p><b>Коротко:</b> ${item.a.short}</p>
-    <p><b>Середній:</b> ${item.a.medium}</p>
-    <p><b>Детально:</b> ${item.a.detailed}</p>
+    <p><b>1.</b> ${item.a.short}</p>
+    <p><b>2.</b> ${item.a.medium}</p>
+    <p><b>3.</b> ${item.a.detailed}</p>
   `;
   content.style.display = "none";
   content.style.marginTop = "8px";

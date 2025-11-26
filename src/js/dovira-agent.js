@@ -362,48 +362,51 @@ const LOCAL_FAQ = [
 // ==============================
 // 🔥 Генерація довідника з LOCAL_FAQ
 // ==============================
-const faqList = document.getElementById("faq-list");
+document.addEventListener("DOMContentLoaded", () => {
+  const faqList = document.getElementById("faq-list");
+  if (!faqList) return;
 
-LOCAL_FAQ.forEach(item => {
-  // Блок для кожного запису
-  const entry = document.createElement("div");
-  entry.style.border = "1px solid #ccc";
-  entry.style.borderRadius = "8px";
-  entry.style.marginBottom = "12px";
-  entry.style.padding = "10px";
-  entry.style.cursor = "pointer";
-  entry.style.transition = "all 0.2s";
+  LOCAL_FAQ.forEach(item => {
+    // Блок для кожного запису
+    const entry = document.createElement("div");
+    entry.style.border = "1px solid #ccc";
+    entry.style.borderRadius = "8px";
+    entry.style.marginBottom = "12px";
+    entry.style.padding = "10px";
+    entry.style.cursor = "pointer";
+    entry.style.transition = "all 0.2s";
 
-  // Відображення ключових слів
-  const keywords = document.createElement("div");
-  keywords.innerHTML = ` ${item.q.join(", ")}`;
-  keywords.style.fontSize = "15px";
-  keywords.style.color = "#333";
-  entry.appendChild(keywords);
+    // Відображення ключових слів
+    const keywords = document.createElement("div");
+    keywords.innerHTML = ` ${item.q.join(", ")}`;
+    keywords.style.fontSize = "15px";
+    keywords.style.color = "#333";
+    entry.appendChild(keywords);
 
-  // Контент (short + medium + detailed)
-  const content = document.createElement("div");
-  content.innerHTML = `
-    <p><b>1.</b> ${item.a.short}</p>
-    <p><b>2.</b> ${item.a.medium}</p>
-    <p><b>3.</b> ${item.a.detailed}</p>
-  `;
-  content.style.display = "none";
-  content.style.marginTop = "8px";
-  content.style.paddingTop = "8px";
-  content.style.borderTop = "1px solid #eee";
-  entry.appendChild(content);
+    // Контент (short + medium + detailed)
+    const content = document.createElement("div");
+    content.innerHTML = `
+      <p><b>1.</b> ${item.a.short}</p>
+      <p><b>2.</b> ${item.a.medium}</p>
+      <p><b>3.</b> ${item.a.detailed}</p>
+    `;
+    content.style.display = "none";
+    content.style.marginTop = "8px";
+    content.style.paddingTop = "8px";
+    content.style.borderTop = "1px solid #eee";
+    entry.appendChild(content);
 
-  // Обробник кліку — відкриття/закриття
-  entry.onclick = () => {
-    if (content.style.display === "none") {
-      content.style.display = "block";
-      entry.style.backgroundColor = "#f9f9f9";
-    } else {
-      content.style.display = "none";
-      entry.style.backgroundColor = "white";
-    }
-  };
+    // Обробник кліку — відкриття/закриття
+    entry.onclick = () => {
+      if (content.style.display === "none") {
+        content.style.display = "block";
+        entry.style.backgroundColor = "#f9f9f9";
+      } else {
+        content.style.display = "none";
+        entry.style.backgroundColor = "white";
+      }
+    };
 
-  faqList.appendChild(entry);
+    faqList.appendChild(entry);
+  });
 });

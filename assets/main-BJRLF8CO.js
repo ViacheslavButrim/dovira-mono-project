@@ -3,4 +3,4 @@
       <p><b>2.</b> ${o.a.medium}</p>
       <p><b>3.</b> ${o.a.detailed}</p>
     `,e.style.display="none",e.style.marginTop="8px",e.style.paddingTop="8px",e.style.borderTop="1px solid #eee",d.appendChild(e),d.onclick=()=>{e.style.display==="none"?(e.style.display="block",d.style.backgroundColor="#f9f9f9"):(e.style.display="none",d.style.backgroundColor="white")},t.appendChild(d)})});document.querySelectorAll(".compare").forEach(t=>{const o=t.querySelector(".slider"),d=t.querySelector(".after"),r=t.querySelector(".glass-handle");o.addEventListener("input",e=>{const i=e.target.value;d.style.clipPath=`inset(0 ${100-i}% 0 0)`,r.style.left=i+"%"})});document.addEventListener("DOMContentLoaded",()=>{const t=document.querySelector(".location-map");t&&(t.dataset.src||(t.dataset.src=t.src,t.src=""),new IntersectionObserver((d,r)=>{d.forEach(e=>{e.isIntersecting&&(t.src=t.dataset.src,r.unobserve(t))})},{threshold:.1}).observe(t))});
-//# sourceMappingURL=main-C7ysfhMi.js.map
+//# sourceMappingURL=main-BJRLF8CO.js.map

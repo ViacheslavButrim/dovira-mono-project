@@ -83,6 +83,11 @@
   .social-list-footer {
     gap: 16px;
   }
+  .p-copirite {
+    font-size: 12px;
+    color:black;
+    padding-top: 16px;
+  }
     @media screen and (min-width: 768px) {
 .logo-svg {
   display: flex;

@@ -25,7 +25,6 @@
     text-shadow: 0 0 24px rgba(255, 255, 255, 0.4);
 }
 
-/* сучасна плавна анімація */
 @keyframes gradientFlow {
     0% {
         background-position: 0% 50%;
@@ -47,7 +46,7 @@
     margin: 12px auto;
     line-height: 1.6;
 }
-/* ❤️💙 Сяйво сердець */
+
 .heart {
     display: inline-block;
     animation: glow 1.8s ease-in-out infinite alternate;
@@ -61,7 +60,6 @@
 .heart-blue {
     filter: drop-shadow(0 0 6px rgba(100, 200, 255, 0.8));
     animation-delay: 0.9s;
-    /* щоб сяяли поперемінно */
 }
 
 @keyframes glow {

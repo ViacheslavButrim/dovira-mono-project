@@ -1,13 +1,7 @@
-/* =========================
-   Modern Minimal Reset
-========================= */
-
-/* Базові стилі для всіх елементів */
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  /* Firefox */
 }
 
 *,
@@ -18,7 +12,6 @@ html {
   padding: 0;
 }
 
-/* Тіло сторінки */
 body {
   overflow-x: hidden;
   font-family: system-ui, sans-serif;
@@ -27,14 +20,11 @@ body {
   color: #000;
 }
 
-/* Основний контейнер */
 main {
   display: block;
-  /* для старих браузерів */
   padding-top: 72px;
 }
 
-/* Заголовки та параграфи */
 h1,
 h2,
 h3,
@@ -45,13 +35,11 @@ p {
   margin: 0;
 }
 
-/* Посилання */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Картинки */
 img,
 picture,
 svg {
@@ -60,7 +48,6 @@ svg {
   height: auto;
 }
 
-/* Кнопки та інтерактивні елементи */
 button {
   cursor: pointer;
   background: none;
@@ -69,26 +56,22 @@ button {
   font: inherit;
 }
 
-/* Списки */
 ul,
 ol {
   list-style: none;
   padding-left: 0;
 }
 
-/* Аббревіатури */
 abbr[title] {
   text-decoration: underline dotted;
 }
 
-/* Горизонтальні лінії */
 hr {
   border: 0;
   height: 1px;
   background: #ccc;
 }
 
-/* Сховані елементи для доступності */
 .visually-hidden {
   position: absolute;
   width: 1px;

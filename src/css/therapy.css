@@ -1,4 +1,3 @@
-/* Секція з градієнтом */
 .section-container {
     background: linear-gradient(180deg,
             #f4e3d3 0%,
@@ -7,7 +6,6 @@
     padding: 60px 0;
 }
 
-/* Обгортка для карток */
 .therapy-wrapper {
     display: flex;
     flex-direction: column;
@@ -15,7 +13,6 @@
     max-width: 920px;
 }
 
-/* Картка */
 .therapy-card {
     background: #ffffff;
     border: 1px solid rgba(88, 176, 180, 0.12);
@@ -30,7 +27,6 @@
     box-shadow: 0 14px 28px rgba(88, 176, 180, 0.15);
 }
 
-/* Заголовок */
 .main-title {
     text-align: center;
     font-size: 32px;
@@ -43,7 +39,6 @@
     margin-bottom: 24px;
 }
 
-/* Текст */
 .p-therapy {
     font-size: 16px;
     line-height: 28px;
@@ -53,7 +48,6 @@
     text-wrap: pretty;
 }
 
-/* Заголовки другого рівня */
 .h-two-therapy {
     font-size: 24px;
     font-weight: 700;
@@ -74,7 +68,6 @@
     border-radius: 3px;
 }
 
-/* Заголовки третього рівня */
 .h-three-therapy {
     font-size: 18px;
     font-weight: 600;
@@ -95,7 +88,6 @@
     border-radius: 3px;
 }
 
-/* Заголовок четвертого рівня */
 .h-four-therapy {
     font-size: 24px;
     font-weight: 700;
@@ -104,7 +96,6 @@
     margin-bottom: 12px;
 }
 
-/* Список */
 .therapy-list {
     list-style: none;
     padding: 0;

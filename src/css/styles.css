@@ -1,18 +1,8 @@
-
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
 @import url('./reset.css');
 @import url('./base.css');
 @import url('./container.css');
 @import url('./mobile-menu.css');
 @import url('./back-link.css');
-
-/* Sections style */
 @import url('./header.css');
 @import url('./hero.css');
 @import url('./welcome.css');
@@ -20,8 +10,6 @@
 @import url('./map.css');
 @import url('./brands.css');
 @import url('./footer.css');
-
-/* Pages style */
 @import url('./therapy.css');
 @import url('./dovira-agent.css');
 @import url('./works.css');

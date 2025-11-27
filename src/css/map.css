@@ -99,13 +99,11 @@
 
 .location-map-link-icon {
     fill: currentColor;
-    /* дозволяє змінювати колір через color */
     transform-origin: center bottom;
     animation: bikeIdle 2s infinite ease-in-out;
     transition: transform 0.3s ease;
 }
 
-/* ефект руху педалей / коліс */
 @keyframes bikeIdle {
     0% {
         transform: translateX(0);

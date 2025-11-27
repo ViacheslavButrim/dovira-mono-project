@@ -14,7 +14,6 @@
   margin: 0 auto;
 }
 
-/* Логотип */
 .logo-footer {
   display: inline-block;
   margin-bottom: 16px;
@@ -26,20 +25,17 @@
   height: auto;
 }
 
-/* Опис футера */
 .footer-desc {
   margin: 16px 0;
   font-size: 1.5rem;
   line-height: 1.4;
 }
 
-/* Текст соцмереж */
 .footer-text {
   margin: 8px 0;
   font-size: 0.95rem;
 }
 
-/* Соцмережі */
 .social-list-footer {
   display: flex;
   justify-content: center;
@@ -74,7 +70,6 @@
   fill: #fff;
 }
 
-/* Адаптивність */
   .footer-desc {
     font-size: 1.2rem;
     margin: 12px 0;

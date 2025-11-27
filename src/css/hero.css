@@ -2,7 +2,6 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    /* на весь екран */
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -18,7 +17,6 @@
     object-fit: cover;
 }
 
-
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -26,19 +24,15 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.45);
-    /* затемнення */
     z-index: -1;
 }
 
 .container-hero {
     position: relative;
     z-index: 2;
-    /* контент поверх відео */
     text-align: center;
     color: #fff;
 }
-
-
 
 .btn-hero {
     background: #8BADA3;
@@ -109,13 +103,12 @@ height: 40px;
         padding-top: 80px;
     }
 }
-/*анімація кнопок*/
+
 .smile-icon {
     transition: transform 0.4s ease, filter 0.4s ease;
     will-change: transform;
 }
 
-/* 📞 Телефон — дзвонить */
 .icon-phone {
     animation: phoneRing 2s ease-in-out infinite;
     transform-origin: center;
@@ -144,7 +137,6 @@ height: 40px;
     }
 }
 
-/* 💬 Callback — легке мерехтіння/світіння */
 .icon-callback {
     animation: callbackPulse 2.5s ease-in-out infinite;
 }
@@ -163,7 +155,6 @@ height: 40px;
     }
 }
 
-/* 😄 Смайлик — сміється */
 .icon-happy {
     animation: smileLaugh 3s ease-in-out infinite;
     transform-origin: center bottom;
@@ -189,7 +180,6 @@ height: 40px;
     }
 }
 
-/* 💰 Валюта — блиск монети */
 .icon-currency {
     animation: coinShine 4s ease-in-out infinite;
 }
@@ -208,7 +198,6 @@ height: 40px;
     }
 }
 
-/* 🔥 Ефект при наведенні на кнопку */
 .btn-hero:hover .smile-icon {
     transform: scale(1.25);
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));

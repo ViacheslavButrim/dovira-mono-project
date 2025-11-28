@@ -2,7 +2,6 @@ html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  overscroll-behavior: contain;
 }
 
 *,
@@ -19,6 +18,14 @@ body {
   line-height: 1.5;
   background: #fff;
   color: #000;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -999;
+  /* завжди під усіма секціями */
+  background: linear-gradient(180deg, rgb(134, 169, 200) 0%, #8BADA3 100%);
 }
 
 main {

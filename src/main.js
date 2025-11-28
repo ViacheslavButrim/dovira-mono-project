@@ -1,6 +1,6 @@
 import './js/mobile-menu.js';
 import './css/styles.css';
-import './js/brands.js';
+//import './js/brands.js';
 import './js/dovira-agent.js';
 import './js/works.js';
 document.addEventListener("DOMContentLoaded", () => {

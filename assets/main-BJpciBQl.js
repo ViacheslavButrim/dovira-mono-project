@@ -3,4 +3,4 @@
       <p><b>2.</b> ${o.a.medium}</p>
       <p><b>3.</b> ${o.a.detailed}</p>
     `,e.style.display="none",e.style.marginTop="8px",e.style.paddingTop="8px",e.style.borderTop="1px solid #eee",t.appendChild(e),t.onclick=()=>{e.style.display==="none"?(e.style.display="block",t.style.backgroundColor="#f9f9f9"):(e.style.display="none",t.style.backgroundColor="white")},d.appendChild(t)})});document.querySelectorAll(".compare").forEach(d=>{const o=d.querySelector(".slider"),t=d.querySelector(".after"),i=d.querySelector(".glass-handle");let e=o.value,r=!1;function s(){r||(window.requestAnimationFrame(()=>{t.style.clipPath=`inset(0 ${100-e}% 0 0)`,i.style.left=`${e}%`,r=!1}),r=!0)}o.addEventListener("input",a=>{e=a.target.value,s()})});document.addEventListener("DOMContentLoaded",()=>{const d=document.querySelector(".location-map");d&&(d.dataset.src||(d.dataset.src=d.src,d.src=""),new IntersectionObserver((t,i)=>{t.forEach(e=>{e.isIntersecting&&(d.src=d.dataset.src,i.unobserve(d))})},{threshold:.1}).observe(d))});
-//# sourceMappingURL=main-CqtW7RmJ.js.map
+//# sourceMappingURL=main-BJpciBQl.js.map

@@ -314,8 +314,8 @@ const LOCAL_FAQ = [
 ];
 document.addEventListener("DOMContentLoaded", () => {
   const faqList = document.getElementById("faq-list");
-  if (!faqList) return;
-  LOCAL_FAQ.forEach(item => {
+  if (!faqList) return; 
+  const createQuestionEntry = (item) => {
     const entry = document.createElement("div");
     entry.style.border = "1px solid #ccc";
     entry.style.borderRadius = "8px";
@@ -323,31 +323,45 @@ document.addEventListener("DOMContentLoaded", () => {
     entry.style.padding = "10px";
     entry.style.cursor = "pointer";
     entry.style.transition = "all 0.2s";
-    const keywords = document.createElement("div");
-    keywords.innerHTML = ` ${item.q.join(", ")}`;
-    keywords.style.fontSize = "15px";
-    keywords.style.color = "#333";
+    const keywords = createKeywords(item.q);
     entry.appendChild(keywords);
+    const content = createContent(item.a);
+    entry.appendChild(content);
+    entry.onclick = () => toggleContent(content, entry);
+
+    return entry;
+  };
+  const createKeywords = (keywords) => {
+    const div = document.createElement("div");
+    div.innerHTML = ` ${keywords.join(", ")}`;
+    div.style.fontSize = "15px";
+    div.style.color = "#333";
+    return div;
+  };
+  const createContent = (answers) => {
     const content = document.createElement("div");
     content.innerHTML = `
-      <p><b>1.</b> ${item.a.short}</p>
-      <p><b>2.</b> ${item.a.medium}</p>
-      <p><b>3.</b> ${item.a.detailed}</p>
+      <p><b>1.</b> ${answers.short}</p>
+      <p><b>2.</b> ${answers.medium}</p>
+      <p><b>3.</b> ${answers.detailed}</p>
     `;
     content.style.display = "none";
     content.style.marginTop = "8px";
     content.style.paddingTop = "8px";
     content.style.borderTop = "1px solid #eee";
-    entry.appendChild(content);
-    entry.onclick = () => {
-      if (content.style.display === "none") {
-        content.style.display = "block";
-        entry.style.backgroundColor = "#f9f9f9";
-      } else {
-        content.style.display = "none";
-        entry.style.backgroundColor = "white";
-      }
-    };
+    return content;
+  };
+  const toggleContent = (content, entry) => {
+    if (content.style.display === "none") {
+      content.style.display = "block";
+      entry.style.backgroundColor = "#f9f9f9";
+    } else {
+      content.style.display = "none";
+      entry.style.backgroundColor = "white";
+    }
+  };
+  LOCAL_FAQ.forEach(item => {
+    const entry = createQuestionEntry(item);
     faqList.appendChild(entry);
   });
 });

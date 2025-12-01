@@ -3,10 +3,6 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
 }
-.scroll-container {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
 
 *,
 *::before,

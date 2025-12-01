@@ -3,6 +3,10 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
 }
+.scroll-container {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
 *,
 *::before,
@@ -13,6 +17,7 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
   overflow-x: hidden;
   font-family: system-ui, sans-serif;
   line-height: 1.5;

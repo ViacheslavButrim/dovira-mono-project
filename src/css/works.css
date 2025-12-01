@@ -73,3 +73,6 @@ box-shadow:
     border: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
+.warning {
+    padding: 40px 16px 0;
+}

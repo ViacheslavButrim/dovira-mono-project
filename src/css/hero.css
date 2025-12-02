@@ -15,6 +15,17 @@
     height: 100%;
     z-index: -2;
     object-fit: cover;
+    will-change: auto;
+}
+.section-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0)
+        );
+    pointer-events: none;
 }
 
 .hero-overlay {
@@ -46,7 +57,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 8px;
 }
 
 .btn-hero:hover {
@@ -74,13 +85,7 @@
 .btn-hero:hover, .btn-hero:focus {
     background-color: #00cccc;
 }
-.brands {
-display: inline-block;
-}
-.brands-icon {
-width: 250px;
-height: 40px;
-}
+
 
 @media screen and (min-width: 768px) {
     .btn-hero-container {
@@ -188,13 +193,13 @@ height: 40px;
 
     0%,
     100% {
-        filter: brightness(1);
         transform: scale(1);
+        filter: none;
     }
 
     50% {
-        filter: brightness(1.8) drop-shadow(0 0 10px gold);
-        transform: scale(1.2) rotate(5deg);
+        transform: scale(1.05);
+        filter: none;
     }
 }
 

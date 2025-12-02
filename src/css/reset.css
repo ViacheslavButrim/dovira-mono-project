@@ -13,7 +13,6 @@ html {
 }
 
 body {
-  scroll-behavior: smooth;
   overflow-x: hidden;
   font-family: system-ui, sans-serif;
   line-height: 1.5;
@@ -25,7 +24,6 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -999;
-  /* завжди під усіма секціями */
   background: linear-gradient(180deg, rgb(134, 169, 200) 0%, #8BADA3 100%);
 }
 

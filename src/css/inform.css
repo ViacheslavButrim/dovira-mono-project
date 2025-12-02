@@ -53,6 +53,13 @@
     animation: glow 1.8s ease-in-out infinite alternate;
     font-size: 16px;
 }
+.hearts {
+    white-space: nowrap;
+    /* не дозволяє перенос між серцями */
+    display: inline-flex;
+    gap: 2px;
+    /* щоб не злипалися */
+}
 
 .heart-yellow {
     filter: drop-shadow(0 0 6px rgba(255, 230, 120, 0.8));

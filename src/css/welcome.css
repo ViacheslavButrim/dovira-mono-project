@@ -2,10 +2,10 @@
     background: linear-gradient(180deg,
             #fee6d0 0%,
             #f4f7fb 40%,
-            rgb(134, 169, 200) 100%
-        );
+            rgb(134, 169, 200) 100%);
     padding: 0;
 }
+
 .welcome {
     display: flex;
     flex-direction: column;
@@ -19,8 +19,7 @@
     padding: 50px 30px;
     max-width: 900px;
     margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08),
-        0 10px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .h-welcome {
@@ -41,13 +40,7 @@
     border-radius: 16px;
     padding: 20px 24px;
     margin-bottom: 22px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-}
-
-.welcome-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(88, 176, 180, 0.12);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .hp-welcome {
@@ -65,6 +58,7 @@
     opacity: 0.9;
 }
 
+/* Блок два */
 .welcome-two {
     background: linear-gradient(180deg, #ffffff 0%, #f8fafa 100%);
     border-radius: 24px;
@@ -72,7 +66,6 @@
     max-width: 900px;
     margin: 0 auto;
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
-    backdrop-filter: blur(6px);
 }
 
 .welcome-two .h-welcome {
@@ -88,8 +81,7 @@
     line-height: 1.8;
     color: #333;
     opacity: 0.95;
-    text-align: justify;
-    text-wrap: wrap;
+    text-align: start;
 }
 
 .welcome-two h3 {
@@ -119,11 +111,4 @@
     padding: 10px 16px;
     margin-bottom: 18px;
     font-size: 16px;
-    transition: all 0.3s ease;
-}
-
-.offer li:hover {
-    background: #eaf6f7;
-    transform: translateX(4px);
-    box-shadow: 0 3px 10px rgba(88, 176, 180, 0.1);
 }

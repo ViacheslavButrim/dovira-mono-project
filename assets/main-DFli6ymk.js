@@ -3,4 +3,4 @@
       <p><b>2.</b> ${t.medium}</p>
       <p><b>3.</b> ${t.detailed}</p>
     `,e.style.display="none",e.style.marginTop="8px",e.style.paddingTop="8px",e.style.borderTop="1px solid #eee",e},d=(t,e)=>{t.style.display==="none"?(t.style.display="block",e.style.backgroundColor="#f9f9f9"):(t.style.display="none",e.style.backgroundColor="white")};l.forEach(t=>{const e=r(t);o.appendChild(e)})});document.querySelectorAll(".compare").forEach(o=>{const r=o.querySelector(".slider"),s=o.querySelector(".after"),i=o.querySelector(".glass-handle");let d=r.value,t=!1;function e(){t||(window.requestAnimationFrame(()=>{s.style.clipPath=`inset(0 ${100-d}% 0 0)`,i.style.left=`${d}%`,t=!1}),t=!0)}r.addEventListener("input",a=>{d=a.target.value,e()})});document.addEventListener("DOMContentLoaded",()=>{const o=document.querySelector(".location-map");o&&(o.dataset.src||(o.dataset.src=o.src,o.src=""),new IntersectionObserver((s,i)=>{s.forEach(d=>{d.isIntersecting&&(o.src=o.dataset.src,i.unobserve(o))})},{threshold:.1}).observe(o))});
-//# sourceMappingURL=main-BIv15G6m.js.map
+//# sourceMappingURL=main-DFli6ymk.js.map

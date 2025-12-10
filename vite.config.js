@@ -14,7 +14,6 @@ export default defineConfig(({ command }) => {
     build: {
       sourcemap: true,
 
-      // 🔥 КРИТИЧНО — додає поліфіл для __VITE_PRELOAD__
       modulePreload: {
         polyfill: true,
       },

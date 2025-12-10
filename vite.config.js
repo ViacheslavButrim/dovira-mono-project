@@ -10,22 +10,32 @@ export default defineConfig(({ command }) => {
       [command === 'serve' ? 'global' : '_global']: {},
     },
     root: 'src',
+
     build: {
       sourcemap: true,
+
+      // 🔥 КРИТИЧНО — додає поліфіл для __VITE_PRELOAD__
+      modulePreload: {
+        polyfill: true,
+      },
+
       rollupOptions: {
         input: glob.sync('./src/*.html'),
+
         output: {
           manualChunks(id) {
             if (id.includes('node_modules')) {
               return 'vendor';
             }
           },
+
           entryFileNames: chunkInfo => {
             if (chunkInfo.name === 'commonHelpers') {
               return 'commonHelpers.js';
             }
             return '[name].js';
           },
+
           assetFileNames: assetInfo => {
             if (assetInfo.name && assetInfo.name.endsWith('.html')) {
               return '[name].[ext]';
@@ -34,9 +44,11 @@ export default defineConfig(({ command }) => {
           },
         },
       },
+
       outDir: '../dist',
       emptyOutDir: true,
     },
+
     plugins: [
       injectHTML(),
       FullReload(['./src/**/**.html']),
